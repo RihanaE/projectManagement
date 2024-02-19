@@ -15,7 +15,9 @@ import { UpdateProgressDto } from "./dto/update-progress.dto";
 import { AddDeveloperDto } from "./dto/add-developer.dto";
 import { RemoveDeveloperDto } from "./dto/remove-developer.dto";
 import { JwtAuthGuard } from "../auth/guards/jwt-auth.guard";
+import { ApiTags } from "@nestjs/swagger";
 
+@ApiTags("Projects")
 @Controller("projects")
 export class ProjectsController {
   constructor(private readonly projectsService: ProjectsService) {}

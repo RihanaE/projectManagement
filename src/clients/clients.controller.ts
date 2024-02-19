@@ -1,10 +1,12 @@
 // clients/clients.controller.ts
-import { Controller, Get, Post, Body, UseGuards } from '@nestjs/common';
-import { ClientsService } from './clients.service';
-import { CreateClientDto } from './dto/create-client.dto';
-import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
+import { Controller, Get, Post, Body, UseGuards } from "@nestjs/common";
+import { ClientsService } from "./clients.service";
+import { CreateClientDto } from "./dto/create-client.dto";
+import { JwtAuthGuard } from "../auth/guards/jwt-auth.guard";
+import { ApiTags } from "@nestjs/swagger";
 
-@Controller('clients')
+@ApiTags("Clients")
+@Controller("clients")
 export class ClientsController {
   constructor(private readonly clientsService: ClientsService) {}
 

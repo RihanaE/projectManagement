@@ -1,7 +1,8 @@
-// projects/dto/update-progress.dto.ts
-import { IsNumber, Min, Max } from 'class-validator';
+import { IsNumber, Min, Max } from "class-validator";
+import { ApiProperty } from "@nestjs/swagger";
 
 export class UpdateProgressDto {
+  @ApiProperty()
   @IsNumber()
   @Min(0)
   @Max(100)

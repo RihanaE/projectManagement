@@ -4,7 +4,9 @@ import { Param } from "@nestjs/common/decorators";
 import { AdminsService } from "./admins.service";
 import { UpdateAdminDto } from "./dto/update-admin.dto";
 import { JwtAuthGuard } from "../auth/guards/jwt-auth.guard";
+import { ApiTags } from "@nestjs/swagger";
 
+@ApiTags("Admin")
 @Controller("admins")
 export class AdminsController {
   constructor(private readonly adminsService: AdminsService) {}

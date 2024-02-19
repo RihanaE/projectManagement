@@ -13,7 +13,9 @@ import { DevelopersService } from "./developers.service";
 import { CreateDeveloperDto } from "./dto/create-developer.dto";
 import { UpdateDeveloperDto } from "./dto/update-developer.dto";
 import { JwtAuthGuard } from "../auth/guards/jwt-auth.guard";
+import { ApiTags } from "@nestjs/swagger";
 
+@ApiTags("Developers")
 @Controller("developers")
 export class DevelopersController {
   constructor(private readonly developersService: DevelopersService) {}
