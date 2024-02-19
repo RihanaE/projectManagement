@@ -44,3 +44,8 @@ This project aims to create a robust Project Management API for clients using Ar
 - Developers are associated with Projects.
 - Admins are in charge of Projects.
 - Clients are linked to Projects.
+
+
+### To try out this project one should create .env file in the root directory and intialize this two variable
+# DB_URI='mongodb://127.0.0.1:27017/projectManagementApi'
+# JWT_SECRET='place your JWT secret key here'
