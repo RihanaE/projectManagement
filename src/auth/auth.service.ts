@@ -35,8 +35,7 @@ export class AuthService {
   }
 
   async register(createAdminDto: CreateAdminDto): Promise<any> {
-    console.log(createAdminDto);
-    console.log("Registering admin");
+    
     // Check if the email is already registered
     const existingAdmin = await this.adminsService.getAdminByEmail(
       createAdminDto.email

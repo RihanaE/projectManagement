@@ -1,25 +1,3 @@
-// import { Injectable } from '@nestjs/common';
-// import { InjectModel } from '@nestjs/mongoose';
-// import * as mongoose from 'mongoose';
-// // import {Project} from './schemas/project.schema';
-// import {Project} from './interface/project.interface';
-
-
-// @Injectable()
-// export class ProjectService {
-//     constructor(
-//         @InjectModel(Project.name)
-//         private projectModel: mongoose.Model<Project>,
-//     ){}
-
-//     async findAll() : Promise<Project[]>{
-//         const projects = await this.projectModel.find();
-//         return projects;
-//     }
-// }
-
-// projects/projects.service.ts
-// projects/projects.service.ts
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';

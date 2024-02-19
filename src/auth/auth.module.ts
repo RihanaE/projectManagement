@@ -9,7 +9,7 @@ import { AdminsModule } from "src/admins/admins.module";
 @Module({
   imports: [
     JwtModule.register({
-      secret: "abc123", // Replace with your actual secret key
+      secret: process.env.JWT_SECRET , // Replace with your actual secret key
     }),
     AdminsModule,
   ],

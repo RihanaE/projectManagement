@@ -25,7 +25,7 @@ export class AdminsService {
   }
 
   async getProfile(id: String): Promise<Admin> {
-    console.log("id", id);
+   
     const admin = await this.adminModel.findById(id).exec();
     if (!admin) {
       throw new NotFoundException("Admin not found");
